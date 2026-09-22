@@ -7,8 +7,7 @@ role** in the surrounding code.
 This package is the **provider-agnostic core**: only houses the tokenizing, local classification, dedup, chunking, retries & confidence normalization.
 You inject a provider via `evaluate` and ready-made adapters live behind subpath exports.
 
-> Looking for the runnable editor demo (Express server + browser client)? That lives in the
-> separate [`jelight-app`](https://github.com/viralcodex/jelight-app) repo.
+> Looking for the jelight editor? That lives in the separate [`jelight-app`](https://github.com/viralcodex/jelight-app) repo.
 
 ## Install
 
