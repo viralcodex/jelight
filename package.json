@@ -1,0 +1,70 @@
+{
+  "name": "jelight",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Semantic code highlighting powered by TypeSafe's Jev model — provider-agnostic core with Vercel Gateway and direct TypeSafe adapters.",
+  "license": "MIT",
+  "author": "",
+  "homepage": "https://github.com/viralcodex/jelight#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viralcodex/jelight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viralcodex/jelight/issues"
+  },
+  "keywords": [
+    "syntax-highlighting",
+    "semantic-highlighting",
+    "code-highlighting",
+    "tokenizer",
+    "jev",
+    "typesafe",
+    "ai",
+    "llm"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./gateway": {
+      "types": "./dist/adapters/gateway.d.ts",
+      "import": "./dist/adapters/gateway.js"
+    },
+    "./typesafe": {
+      "types": "./dist/adapters/typesafe.d.ts",
+      "import": "./dist/adapters/typesafe.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "ai": "^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ai": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "ai": "^7.0.107",
+    "typescript": "^5.7.2"
+  }
+}
